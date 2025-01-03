@@ -8,30 +8,29 @@
   <title>mockTrails-profile</title>
 
   <!-- Google Font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- daisyui tailwind cdn -->
-  
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- font-awsome library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-<body class="font-[poppins] bg-white h-auto w-full">
+<body class="font-[Dancing+Script] bg-white h-auto w-full">
   <div class=" ">
     
     <!-- navigation menu starts --> 
-    <div class="flex items-center gap-[250px] mx-[30px] h-[80px]">
+    <div class="flex items-center gap-[300px] mx-[30px] h-[80px]">
       <img src="logo.png" class="w-[180px] h-[40px]">
-      <div class="flex justify-center items-center gap-[30px] text-black">
+      <div class="flex justify-center items-center gap-[30px] text-gray-600 font-bold">
           <a>Home</a>
           <a>Interviewers</a>
           <a>Blogs</a>
       </div>
-      <div class="flex gap-[20px]">
-        <a><button class="w-[100px] px-[5px] py-[5px] rounded-[10px] bg-white text-black">Sign In</button></a>
-      <a><button class="w-[120px] px-[5px] py-[5px] rounded-[10px] bg-violet-700 text-white">Get Started</button></a>
+      <div class="flex gap-2">
+       <a><button class="w-[80px] px-2 py-2 rounded-6 bg-gray-200 text-gray-600 text-sm font-bold">Sign In</button></a>
+       <a><button class="w-[100px] px-2 py-2 rounded-6 bg-violet-700 text-white text-sm font-bold">Get Started</button></a>
       </div>
     </div>
     <!-- navigation menu ends --> 
@@ -40,9 +39,9 @@
 
      <img src="download.jpg" class="h-[300px] w-full">
 
-     <div class="flex justify-center gap-[300px]">
-      <div class="flex justify-center items-center gap-[50px]">
-        <img src="sir.jpg" class="rounded-full h-[300px] w-[300px] relative top-[-120px]">
+     <div class="flex justify-center gap-[380px]">
+      <div class="flex justify-center items-center gap-[20px]">
+        <img src="sir.jpg" class="rounded-full border-8 border-white h-[250px] w-[250px] relative top-[-120px]">
         <div class="grid gap-[10px]">
           <h1 class="text-2xl font-bold text-gray-800">Abir Khan <span class="text-lg text-gray-500">BD</span></h1>
           <h2 class="text-black text-lg"> Senior Software Engineer<span class="text-gray-500"> at</span><span class="font-bold"> Growth Garage</span></h2>
@@ -54,28 +53,25 @@
       </div>
       <div>
         
-        <button class="px-[20px] py-[20px] bg-purple-700 text-white text-2xl"><i class="far fa-comment"></i></button>
-        <button class="px-[20px] py-[20px] bg-white  text-2xl"><i class='far fa-heart'></i></button>
+        <button class="px-[15px] py-[10px] bg-violet-700 text-white text-lg"><i class="far fa-comment"></i></button>
+        <button class="px-[15px] py-[10px] bg-white  text-lg"><i class='far fa-heart'></i></button>
       </div>
      </div>
     <!-- header banner ends -->
   </div>
 
-    <!-- Main Container -->
-    <div class="max-w-3xl mx-6 mt-10 p-6 bg-white rounded-lg shadow-lg">
-      <!-- Tabs -->
-      <div class="flex border-b mb-6">
-        <button id="overviewTab" class="px-6 py-2 text-gray-600 border-b-2 border-transparent hover:text-purple-600 hover:border-purple-600 focus:outline-none">
-          Overview
-        </button>
-        <button id="reviewsTab" class="px-6 py-2 text-gray-600 border-b-2 border-transparent hover:text-purple-600 hover:border-purple-600 focus:outline-none">
-          Reviews
-        </button>
-      </div>
+  <!-- Main Container -->
+   <div class="max-w-3xl mx-6 mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <!-- Tabs -->
+     <div class="flex border-b mb-6">
+       <button id="overviewTab" class="px-6 py-2 text-gray-600 border-b-2 border-transparent hover:text-purple-600 hover:border-purple-600 focus:outline-none">Overview</button>
+        
+       <button id="reviewsTab" class="px-6 py-2 text-gray-600 border-b-2 border-transparent hover:text-purple-600 hover:border-purple-600 focus:outline-none">Reviews</button>
+     </div>
   
-      <!-- Tab Content -->
+    <!-- Tab Content -->
       <div id="overviewContent" class="tab-content">
-        <div class="max-w-6xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+        <div class="w-full mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
           <!-- Header -->
           <h1 class="text-2xl font-semibold mb-6">5+ Years of Experience in Software Engineering</h1>
       
@@ -330,38 +326,7 @@
       </div>
     </div>
   
-    <script>
-      // Select elements
-      const overviewTab = document.getElementById('overviewTab');
-      const reviewsTab = document.getElementById('reviewsTab');
-      const overviewContent = document.getElementById('overviewContent');
-      const reviewsContent = document.getElementById('reviewsContent');
-  
-      // Add event listeners for tab buttons
-      overviewTab.addEventListener('click', () => {
-        // Show Overview content
-        overviewContent.classList.remove('hidden');
-        reviewsContent.classList.add('hidden');
-        
-        // Update tab styles
-        overviewTab.classList.add('text-purple-600', 'border-purple-600');
-        overviewTab.classList.remove('text-gray-600', 'border-transparent');
-        reviewsTab.classList.add('text-gray-600', 'border-transparent');
-        reviewsTab.classList.remove('text-purple-600', 'border-purple-600');
-      });
-  
-      reviewsTab.addEventListener('click', () => {
-        // Show Reviews content
-        reviewsContent.classList.remove('hidden');
-        overviewContent.classList.add('hidden');
-        
-        // Update tab styles
-        reviewsTab.classList.add('text-purple-600', 'border-purple-600');
-        reviewsTab.classList.remove('text-gray-600', 'border-transparent');
-        overviewTab.classList.add('text-gray-600', 'border-transparent');
-        overviewTab.classList.remove('text-purple-600', 'border-purple-600');
-      });
-    </script>
+    <script src="script.js"></script>
   
 </body>
 </html>
